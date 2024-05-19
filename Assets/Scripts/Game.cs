@@ -54,6 +54,5 @@ public class Game : MonoBehaviour
     {
         score++;
         scoreText.text = score.ToString();
-        Debug.Log(score);
     }
 }
