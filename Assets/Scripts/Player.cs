@@ -55,7 +55,6 @@ public class Player : MonoBehaviour
         }
 
         // update de la position du joueur
-        // deltaTime signifie une accélération vers le bas
         direction.y += gravity * Time.deltaTime;
         transform.position += direction * Time.deltaTime;
     }

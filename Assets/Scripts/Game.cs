@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,12 +7,14 @@ public class Game : MonoBehaviour
     public Text scoreText;
     public GameObject playButton;
     public GameObject gameOver;
+    public GameObject getReady;
 
     private int score;
 
     private void Awake()
     {
         Application.targetFrameRate = 60;
+        gameOver.SetActive(false);
         Pause();
     }
 
@@ -25,6 +25,7 @@ public class Game : MonoBehaviour
 
         playButton.SetActive(false);
         gameOver.SetActive(false);
+        getReady.SetActive(false);
 
         Time.timeScale = 1f;
         player.enabled = true;
